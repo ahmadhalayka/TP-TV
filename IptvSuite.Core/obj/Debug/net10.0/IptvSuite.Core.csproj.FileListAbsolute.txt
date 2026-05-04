@@ -1,0 +1,11 @@
+D:\ERP_Project\IP-TV\IptvSuite.Core\bin\Debug\net10.0\IptvSuite.Core.deps.json
+D:\ERP_Project\IP-TV\IptvSuite.Core\bin\Debug\net10.0\IptvSuite.Core.dll
+D:\ERP_Project\IP-TV\IptvSuite.Core\bin\Debug\net10.0\IptvSuite.Core.pdb
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.AssemblyInfoInputs.cache
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.AssemblyInfo.cs
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.csproj.CoreCompileInputs.cache
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.dll
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\refint\IptvSuite.Core.dll
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\IptvSuite.Core.pdb
+D:\ERP_Project\IP-TV\IptvSuite.Core\obj\Debug\net10.0\ref\IptvSuite.Core.dll

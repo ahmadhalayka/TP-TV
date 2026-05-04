@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IptvSuite.Mobile.props" />
+</Project>

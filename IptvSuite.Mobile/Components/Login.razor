@@ -1,0 +1,72 @@
+﻿@page "/login"
+@using IptvSuite.Core.Models
+@using IptvSuite.Core.Services
+@inject IIptvService IptvService
+
+<h3>IPTV Login</h3>
+
+<div style="max-width:360px">
+
+    <label>Server URL</label><br />
+    <input @bind="ServerUrl" placeholder="http://xvt.im:8080"
+           style="width:100%" />
+    <br /><br />
+
+    <label>Username</label><br />
+    <input @bind="Username" style="width:100%" />
+    <br /><br />
+
+    <label>Password</label><br />
+    <input type="password" @bind="Password"
+           style="width:100%" />
+    <br /><br />
+
+    <button @onclick="DoLogin">Login</button>
+
+    @if (!string.IsNullOrEmpty(Error))
+    {
+        <p style="color:red; margin-top:10px">
+            @Error
+        </p>
+    }
+
+</div>
+
+@code {
+
+    string ServerUrl = "http://xvt.im:8080"; // ✅ الرابط الصحيح
+    string Username = "";
+    string Password = "";
+    string Error = "";
+
+    async Task DoLogin()
+    {
+        Error = "";
+
+        try
+        {
+            var account = new IptvAccount
+            {
+                ServerUrl = ServerUrl.Trim().TrimEnd('/'),
+                Username = Username.Trim(),
+                Password = Password.Trim()
+            };
+
+            var ok = await IptvService.LoginAsync(account);
+
+            if (!ok)
+            {
+                // ✅ اعرض الخطأ الحقيقي من الخدمة
+                if (IptvService is XtreamIptvService xtream)
+                    Error = xtream.LastError;
+                else
+                    Error = "Login failed (unknown error)";
+            }
+        }
+        catch (Exception ex)
+        {
+            // ✅ أي Exception يظهر بوضوح
+            Error = ex.Message;
+        }
+    }
+}

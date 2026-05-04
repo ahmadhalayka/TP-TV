@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="IptvSuite.Core/IptvSuite.Core.csproj" />
+  <Project Path="IptvSuite.Mobile/IptvSuite.Mobile.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="IptvSuite.Web/IptvSuite.Web.csproj" />
+</Solution>

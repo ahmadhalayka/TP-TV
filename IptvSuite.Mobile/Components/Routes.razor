@@ -1,0 +1,25 @@
+﻿@using IptvSuite.Mobile.Components
+
+
+<ErrorBoundary>
+    <ChildContent>
+        <Router AppAssembly="@typeof(App).Assembly">
+            <Found Context="routeData">
+                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            </Found>
+            <NotFound>
+                <RedirectToLogin />
+            </NotFound>
+        </Router>
+    </ChildContent>
+
+    <ErrorContent Context="ex">
+        <div style="padding:16px">
+            <h3 style="color:#b00020">Runtime Error</h3>
+            <p style="color:#b00020; font-weight:bold">@ex.Message</p>
+            <pre style="white-space:pre-wrap; font-size:12px; opacity:.85">@ex.ToString()</pre>
+            <p>ارجع لصفحة الدخول:</p>
+            <a href="/login">Go to /login</a>
+        </div>
+    </ErrorContent>
+</ErrorBoundary>
